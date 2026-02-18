@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #03224c;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #03224c 0%, #043366 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+            align-items: start;
+        }
+
+        .image-section {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(3, 34, 76, 0.1);
+            border: 1px solid rgba(3, 34, 76, 0.1);
+        }
+
+        .image-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .image-section:hover img {
+            transform: scale(1.02);
+        }
+
+        .brochure-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(3, 34, 76, 0.1);
+            border: 1px solid rgba(3, 34, 76, 0.1);
+        }
+
+        .brochure-section h2 {
+            color: #03224c;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: 400;
+        }
+
+        .brochure-section p {
+            color: #424242;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #03224c 0%, #043366 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(3, 34, 76, 0.2);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(3, 34, 76, 0.3);
+        }
+
+        .download-icon {
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+            border-top: 1px solid rgba(3, 34, 76, 0.1);
+            color: #03224c;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .brochure-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Découvrez nos programmes</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="content">
+            <section class="image-section">
+                <img src="IMG_0063.jpeg" alt="Image présentation" />
+            </section>
+
+            <section class="brochure-section">
+                <h2>Notre Dépliant</h2>
+                <p>Téléchargez notre dépliant pour découvrir en détail nos programmes et tout ce que nous avons à vous offrir.</p>
+                <a href="depliant TGM.pdf" download class="download-btn">
+                    <span class="download-icon">📄</span>
+                    Télécharger le dépliant
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 - Tous droits réservés</p>
+        </div>
+    </footer>
+</body>
+</html>
